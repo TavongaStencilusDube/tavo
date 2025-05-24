@@ -145,9 +145,22 @@ body {
     padding: 1rem 0;
 }
 
-.section.white.two .text {
+.section.white.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 0 auto;
-  max-width: 700px;
+  padding: 2rem 1rem;
 }
 
+.section.white.two .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.section.white.two .text {
+  width: 100%;
+}
