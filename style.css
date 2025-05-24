@@ -144,33 +144,3 @@ body {
 .site-header {
     padding: 1rem 0;
 }
-
-.skills-list li::before {
-  content: "✓";
-  color: #4caf50;
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-.skills-list li strong {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-size: 1.15rem;
-  color: #222;
-}
-
-.black .skills-list li strong {
-  color: #ddd;
-}
-
-.skills-list li ul {
-  margin-top: 5px;
-  margin-left: 1.2rem;
-  list-style: disc;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.skills-list li ul li::before {
-  content: "";
-}
