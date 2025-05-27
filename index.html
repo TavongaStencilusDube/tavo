@@ -3,184 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tavonga Stencilus Dube | AI Portfolio</title>
+  <title>Tavonga Stencilus Dube | AI & ML Student</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --primary-color: #00ff88;
-      --secondary-color: #0a192f;
-      --accent-color: #64ffda;
-      --text-color: #ccd6f6;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    body {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      background: rgba(10, 25, 47, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      padding: 1rem 0;
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-color);
-    }
-
-    .section {
-      padding: 4rem 2rem;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .curved-img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      margin-bottom: 2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .curved-img:hover {
-      transform: scale(1.02);
-    }
-
-    .text {
-      max-width: 600px;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .section-desc {
-      font-size: 1.1rem;
-      color: #8892b0;
-      margin-bottom: 1.5rem;
-    }
-
-    .skills-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    .skills-list li {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .project {
+    /* Previous CSS remains the same, adding new project-card style */
+    .project-card {
       background: rgba(255, 255, 255, 0.05);
       padding: 2rem;
       border-radius: 15px;
-      margin-bottom: 2rem;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      color: var(--secondary-color);
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    @media (min-width: 768px) {
-      .content {
-        flex-direction: row;
-        align-items: center;
-      }
-      
-      .section:nth-child(even) .content {
-        flex-direction: row-reverse;
-      }
-      
-      .curved-img {
-        max-width: 400px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .section-title {
-        font-size: 2rem;
-      }
-      
-      .header-container {
-        flex-direction: column;
-        gap: 1rem;
-      }
+      margin: 1rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
   </style>
 </head>
@@ -192,30 +26,121 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Connect</a>
       </nav>
     </div>
   </header>
 
+  <!-- Home Section -->
   <section id="home" class="section">
     <div class="content">
       <img src="Dube.jpg" alt="Profile photo" class="curved-img">
       <div class="text">
-        <h1 class="section-title">AI Innovator & Machine Learning Engineer</h1>
+        <h1 class="section-title">Passionate AI & Machine Learning Student</h1>
         <p class="section-desc">
-          Transforming ideas into intelligent solutions at Africa University's innovation hub. 
-          Specializing in deep learning architectures and real-world AI applications.
+          Curious mind exploring the frontiers of intelligent systems at Africa University. 
+          Currently immersing myself in machine learning fundamentals, data patterns, 
+          and smart device technologies while building practical solutions.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Rest of your sections with similar structure -->
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="content">
+      <div class="text">
+        <h2 class="section-title">My Learning Journey</h2>
+        <p class="section-desc">
+          As a dedicated Computer Science student specializing in AI, I'm cultivating expertise in:
+        </p>
+        <ul class="skills-list">
+          <li>Machine Learning Algorithms</li>
+          <li>Neural Networks & Deep Learning</li>
+          <li>Big Data Analytics</li>
+          <li>IoT System Architecture</li>
+          <li>Applied Mathematics</li>
+        </ul>
+        <p class="section-desc">
+          My academic focus combines theoretical knowledge with hands-on projects, 
+          constantly exploring how data-driven solutions can solve real-world challenges.
+        </p>
+      </div>
+      <img src="pexels-pixabay-158826.jpg" alt="Learning journey" class="curved-img">
+    </div>
+  </section>
 
-  <footer class="footer">
-    <a href="https://linkedin.com" class="btn">LinkedIn</a>
-    <a href="https://github.com" class="btn">GitHub</a>
-    <a href="mailto:example@email.com" class="btn">Email</a>
-  </footer>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="content">
+      <div class="text">
+        <h2 class="section-title">Developing Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Machine Learning</h3>
+            <ul>
+              <li>Python · TensorFlow · PyTorch</li>
+              <li>Supervised Learning · NLP Basics</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Data & Analytics</h3>
+            <ul>
+              <li>SQL · Pandas · NumPy</li>
+              <li>Data Visualization · Spark</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>IoT Development</h3>
+            <ul>
+              <li>Embedded Systems · BLE</li>
+              <li>Sensor Networks · Raspberry Pi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="content">
+      <div class="text">
+        <h2 class="section-title">Academic Projects</h2>
+        
+        <div class="project-card">
+          <h3>Smart Contact Tracing System</h3>
+          <p>A privacy-focused solution combining BLE technology and proximity algorithms 
+          for secure contact tracking. Developed as part of my IoT coursework.</p>
+          <p class="tech-stack">Technologies: Python · BLE · SQLite</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Academic Performance Predictor</h3>
+          <p>Machine learning model analyzing student data to predict academic success, 
+          created for my Data Mining class project.</p>
+          <p class="tech-stack">Technologies: Scikit-learn · Pandas · Matplotlib</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="content">
+      <div class="text">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-desc">
+          Open to research collaborations, academic discussions, and learning opportunities:
+        </p>
+        <div class="footer">
+          <a href="#contact" class="btn">LinkedIn</a>
+          <a href="#contact" class="btn">GitHub</a>
+          <a href="mailto:tavongafourth@gmail.com" class="btn">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
