@@ -1,10 +1,30 @@
 {
-  "name": "bloop",
+  "name": "ai-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Tavonga Stencilus Dube's AI Portfolio",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./",
+    "preview": "parcel preview"
   },
-  "private": true
+  "keywords": [
+    "AI",
+    "portfolio",
+    "machine-learning",
+    "web-development"
+  ],
+  "author": "Tavonga Stencilus Dube",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.1.1",
+    "autoprefixer": "^10.4.14"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }
