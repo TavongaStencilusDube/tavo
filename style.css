@@ -1,4 +1,4 @@
-/* Additional CSS for interactions */
+/* Enhanced Interactions CSS */
 .site-header.scrolled {
   background: rgba(10, 25, 47, 0.98);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -15,23 +15,59 @@
   transform: translateY(0);
 }
 
-.form-error, .form-success {
-  padding: 1rem;
+/* Skill Category Enhancements */
+.skill-category {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
   margin: 1rem 0;
-  border-radius: 8px;
-  text-align: center;
 }
 
-.form-error {
-  background: #ff4444;
-  color: white;
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 136, 0.1);
 }
 
-.form-success {
-  background: #00C851;
-  color: white;
+/* Project Card Interactions */
+.project-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 136, 0.15);
+}
+
+/* Connect Buttons Enhancement */
+.btn {
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255,255,255,0.1), 
+    transparent);
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+  left: 150%;
+}
+
+/* Optional Theme Toggle (keep if using) */
 .theme-toggle {
   position: fixed;
   bottom: 2rem;
@@ -45,4 +81,21 @@
   font-size: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
   z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skill-category {
+    margin: 0.5rem 0;
+    padding: 1rem;
+  }
+  
+  .project-card {
+    margin: 1rem 0;
+  }
 }
