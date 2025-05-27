@@ -5,7 +5,10 @@ module.exports = {
       stage: 1,
       features: {
         'nesting-rules': true,
-        'custom-media-queries': true
+        'custom-media-queries': true,
+        'custom-properties': true,
+        'color-mod-function': true,
+        'focus-within-pseudo-class': true
       }
     }),
     require('autoprefixer')
