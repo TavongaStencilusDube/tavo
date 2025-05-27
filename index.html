@@ -1,292 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tavonga Stencilus Dube | AI & ML Student</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary-color: #8AFFC1;
-      --secondary-color: #0A192F;
-      --accent-color: #64FFDA;
-      --text-color: #CCD6F6;
-      --card-bg: rgba(100, 255, 218, 0.05);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    body {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      font-size: 1.05rem;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      background: rgba(10, 25, 47, 0.98);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      padding: 1.2rem 0;
-      border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--primary-color);
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-    }
-
-    .nav-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-color);
-      transform: translateY(-2px);
-    }
-
-    .section {
-      padding: 5rem 2rem;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-
-    .curved-img {
-      width: 100%;
-      max-width: 480px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .text {
-      max-width: 600px;
-    }
-
-    .section-title {
-      font-size: 2.2rem;
-      margin-bottom: 1.8rem;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1.3;
-    }
-
-    .section-desc {
-      font-size: 1.05rem;
-      color: #8892B0;
-      margin-bottom: 1.8rem;
-      line-height: 1.7;
-    }
-
-    .skills-list {
-      display: grid;
-      gap: 1.2rem;
-      list-style: none;
-    }
-
-    .skills-list li {
-      background: var(--card-bg);
-      padding: 1.2rem;
-      border-radius: 8px;
-      border: 1px solid rgba(100, 255, 218, 0.1);
-      font-size: 0.95rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      width: 100%;
-    }
-
-    .skill-category {
-      background: var(--card-bg);
-      padding: 1.8rem;
-      border-radius: 12px;
-      border: 1px solid rgba(100, 255, 218, 0.1);
-    }
-
-    .skill-category h3 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 1.5rem 0;
-      border: 1px solid rgba(100, 255, 218, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .tech-stack {
-      color: var(--primary-color);
-      font-size: 0.9rem;
-      margin-top: 1rem;
-      opacity: 0.9;
-    }
-
-    .footer {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 2rem 0;
-    }
-
-    .btn {
-      padding: 0.9rem 1.8rem;
-      border-radius: 28px;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      color: var(--secondary-color);
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(138, 255, 193, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      .section {
-        padding: 3rem 1.5rem;
-        min-height: auto;
-      }
-      
-      .header-container {
-        flex-direction: column;
-        gap: 1.2rem;
-        text-align: center;
-      }
-      
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-      }
-      
-      .curved-img {
-        max-width: 100%;
-        margin-bottom: 2rem;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <!-- Keep head section the same as before -->
 </head>
 <body>
-  <!-- Header remains the same -->
+  <header class="site-header">
+    <!-- Keep header the same -->
+  </header>
 
-  <!-- Home Section -->
+  <!-- Enhanced Home Section -->
   <section id="home" class="section">
     <div class="content">
       <img src="Dube.jpg" alt="Profile photo" class="curved-img">
       <div class="text">
-        <h1 class="section-title">Passionate Student in AI & Machine Learning</h1>
+        <h1 class="section-title">Tavonga Stencilus Dube</h1>
         <p class="section-desc">
-          Curious explorer of intelligent systems at Africa University, 
-          merging academic rigor with practical experimentation. Currently 
-          focused on mastering machine learning foundations and developing 
-          data-driven solutions through hands-on projects.
+          I'm an Artificial Intelligence student at Africa University, passionately exploring the realms of machine learning and smart technologies. 
+          Currently immersing myself in deep learning models, big data analytics, and IoT systems while developing practical AI solutions.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <!-- Enhanced Skills Section -->
+  <section id="skills" class="section">
     <div class="content">
       <div class="text">
-        <h2 class="section-title">Learning Path</h2>
-        <p class="section-desc">
-          Building expertise through structured learning and practical application:
-        </p>
-        <ul class="skills-list">
-          <li>Core ML Algorithms & Statistical Modeling</li>
-          <li>Deep Learning Architectures</li>
-          <li>Big Data Processing Techniques</li>
-          <li>IoT System Design Principles</li>
-          <li>Advanced Mathematical Foundations</li>
-        </ul>
-      </div>
-      <img src="pexels-pixabay-158826.jpg" alt="Learning journey" class="curved-img">
-    </div>
-  </section>
-
-  <!-- Skills & Projects sections remain similar with updated content -->
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="content">
-      <div class="text">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-desc">
-          Open to learning opportunities, academic collaborations, and 
-          knowledge exchange in emerging technologies:
-        </p>
-        <div class="footer">
-          <a href="#contact" class="btn">LinkedIn</a>
-          <a href="#contact" class="btn">GitHub</a>
-          <a href="mailto:tavongafourth@gmail.com" class="btn">Email</a>
+        <h2 class="section-title">Technical Proficiencies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>Python · C++ · Rust</li>
+              <li>Java · C# · JavaScript</li>
+              <li>SQL · HTML/CSS</li>
+            </ul>
+          </div>
+          
+          <div class="skill-category">
+            <h3>AI/ML Stack</h3>
+            <ul>
+              <li>TensorFlow · PyTorch</li>
+              <li>Scikit-learn · Keras</li>
+              <li>OpenCV · Pandas</li>
+            </ul>
+          </div>
+          
+          <div class="skill-category">
+            <h3>Data & Cloud</h3>
+            <ul>
+              <li>Hadoop · Spark</li>
+              <li>AWS · Google Cloud</li>
+              <li>Tableau · Power BI</li>
+            </ul>
+          </div>
+          
+          <div class="skill-category">
+            <h3>IoT & Embedded</h3>
+            <ul>
+              <li>Arduino · Raspberry Pi</li>
+              <li>BLE · MATTER Protocol</li>
+              <li>Sensor Networks</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Enhanced Projects Section -->
+  <section id="projects" class="section">
+    <div class="content">
+      <div class="text">
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="project-card">
+          <h3>Smart Contact Tracing System</h3>
+          <p>Developed a privacy-focused contact tracing solution using BLE technology and proximity algorithms, 
+          implementing secure data handling with SQLite and Python-based analytics.</p>
+          <p class="tech-stack">Technologies: Python · BLE · SQLite · Embedded C++</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Academic Performance Predictor</h3>
+          <p>Machine learning model analyzing educational patterns using Scikit-learn, 
+          featuring data preprocessing with Pandas and visualization with Matplotlib.</p>
+          <p class="tech-stack">Technologies: Python · Scikit-learn · Pandas · NumPy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keep other sections the same -->
 </body>
 </html>
